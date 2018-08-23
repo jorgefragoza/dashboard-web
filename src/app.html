@@ -1,0 +1,12 @@
+<template>
+  <require from="materialize-css/css/materialize.css"></require>
+  <require from="components/login-container"></require>
+  <require from="components/dashboard"></require>
+
+  <div if.bind="signedIn">
+    <dashboard></dashboard>
+  </div>
+  <div if.bind="!signedIn">
+      <login-container></login-container>
+  </div>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <require from="components/step-one"></require>
+    <require from="components/step-two"></require>
+
+    <div if.bind="step === 1" class="animated fadeInLeftBig">
+        <step-one></step-one>
+    </div>
+
+    <div if.bind="step === 2" class="animated fadeInLeftBig">
+        <compose view-model="./step-two" model.bind="user"></compose>
+    </div>
+    
+    <!-- <step-two name.bind="pablo"></step-two> -->
+    
+</template>
